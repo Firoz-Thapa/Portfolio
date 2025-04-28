@@ -1,9 +1,8 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { CgCPlusPlus } from "react-icons/cg"; 
-import { DiJavascript1, DiReact, DiNodejs, DiMongodb, DiPython, DiGit, DiJava } from "react-icons/di"; // JS, React, Node.js, MongoDB, Python, Git, Java
-import { SiTypescript, SiHtml5, SiCss3, SiMysql, SiPostgresql, SiAmazonaws } from "react-icons/si"; // TypeScript, HTML5, CSS, MySQL, PostgreSQL, AWS
-//import { TbBrandGolang } from "react-icons/tb"; // Go
+import { DiJavascript1, DiReact, DiNodejs, DiMongodb, DiPython, DiGit, DiJava } from "react-icons/di";
+import { SiTypescript, SiHtml5, SiCss3, SiMysql, SiPostgresql, SiAmazonaws, SiCsharp, SiMicrosoftazure } from "react-icons/si";
 
 function Techstack() {
   return (
@@ -25,7 +24,7 @@ function Techstack() {
         <DiJava title="Java" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus title="C#" /> {/* You might want to replace this with a suitable icon for C# */}
+        <SiCsharp title="C#" /> {/* Proper C# icon */}
       </Col>
 
       {/* Frontend Technologies */}
@@ -58,9 +57,12 @@ function Techstack() {
         <SiPostgresql title="PostgreSQL" />
       </Col>
 
-      {/* DevOps */}
+      {/* Cloud Services */}
       <Col xs={4} md={2} className="tech-icons">
         <SiAmazonaws title="AWS" />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiMicrosoftazure title="Microsoft Azure" /> {/* Added Azure icon */}
       </Col>
     </Row>
   );

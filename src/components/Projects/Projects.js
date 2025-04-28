@@ -3,8 +3,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 // Import your project images
-import park from "../../Assets/Projects/park.png"; // Make sure this path is correct
+import park from "../../Assets/Projects/park.png"; 
 import app from "../../Assets/Projects/app.png";
+import psp from "../../Assets/Projects/psp.png"; 
+import gym from "../../Assets/Projects/gym.png";
 
 function Projects() {
   return (
@@ -39,7 +41,26 @@ function Projects() {
               demoLink="https://youtu.be/o6_VvFoCMSw?si=hwANspzobGcCektt"
             />
           </Col>
-          {/* Add more ProjectCards here if needed */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={psp}
+              isBlog={false}
+              title="PSP Application for Mechnaical Engineering"
+              description="A MERN stack application that streamlines study planning and progress tracking for mechanical engineering students at LAB University."
+              ghLink="https://github.com/Firoz-Thapa/Personal-Study-plan-LAB"
+              demoLink="https://youtu.be/x_Dq0jPIpAY"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={gym}
+              isBlog={false}
+              title="Gym Occupancy monitoring system for holiday village"
+              description="IoT gym occupancy system with motion sensors tracking real-time zone usage and providing dashboard analytics to optimize gym operations."
+              ghLink="https://github.com/Firoz-Thapa/iot-pipeline"
+              demoLink="https://youtu.be/RgjcO-loo10"
+            />
+          </Col>
         </Row>
       </Container>
     </Container>

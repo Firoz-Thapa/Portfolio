@@ -1,0 +1,475 @@
+/* About Section Styling */
+.about-section {
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    background-image: var(--section-background-color);
+    color: white;
+  }
+  
+  .about-img {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .about-img img {
+    animation: updown 3s linear infinite;
+  }
+  
+  @keyframes updown {
+    0% {
+      transform: translateY(-20px);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* AboutCard Styling */
+  .quote-card-view {
+    border: none !important;
+    color: white !important;
+    background-color: transparent !important;
+  }
+  
+  .blockquote {
+    border-left: 4px solid var(--primary-purple) !important;
+    padding-left: 20px;
+  }
+  
+  .blockquote-footer {
+    color: #a588c0 !important;
+  }
+  
+  .about-activity {
+    margin-top: 25px;
+  }
+  
+  .activity-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  
+  .activity-icon {
+    color: var(--primary-purple);
+    margin-right: 10px;
+    font-size: 1.3em;
+  }
+  
+  /* Education Section Styling */
+  .education-card {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .education-card-view {
+    background-color: rgba(171, 138, 192, 0.05);
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .education-card-view:hover {
+    transform: translateY(-10px) scale(1.02) !important;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.4s ease !important;
+  }
+  
+  .education-degree {
+    font-size: 1.6em;
+    color: var(--primary-purple);
+    margin-bottom: 10px;
+  }
+  
+  .education-institution {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .education-duration {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #c1b8c8;
+  }
+  
+  .education-description {
+    text-align: justify;
+  }
+  
+  /* Project Heading Styling */
+  .project-heading {
+    color: white !important;
+    font-size: 2.3em !important;
+    font-weight: 500 !important;
+    padding-top: 10px !important;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Tech Card Flip Animation Styling */
+  
+  /* Container for the flip card */
+  .tech-card-container {
+    perspective: 1000px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* The actual card that flips */
+  .tech-card {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    border-radius: 5px;
+    border: 1.7px solid rgba(200, 137, 230, 0.637);
+    background-color: rgba(25, 25, 25, 0.6);
+    box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137);
+  }
+  
+  /* Flipped state */
+  .tech-card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  /* Front and back faces */
+  .tech-card-front, .tech-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  /* Front face (icon) */
+  .tech-card-front {
+    z-index: 2;
+    font-size: 3.5em;
+  }
+  
+  /* Back face (name) */
+  .tech-card-back {
+    transform: rotateY(180deg);
+    background-color: rgba(25, 25, 25, 0.9);
+    border: 1.7px solid rgba(200, 137, 230, 0.8);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Hover effect */
+  .tech-card:hover {
+    border-color: rgba(197, 115, 230, 0.883);
+    box-shadow: 0 8px 16px rgba(89, 4, 168, 0.2);
+  }
+  
+  /* Purple border animation on hover */
+  .tech-card::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    z-index: -1;
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .tech-card:hover::after {
+    border-color: var(--primary-purple, #c770f0);
+  }
+  
+  /* Animations for About Section */
+  
+  /* Floating animation for about image */
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  /* Pulse animation for icons */
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Typewriter effect for name */
+  .typewriter {
+    overflow: hidden;
+    border-right: .15em solid var(--primary-purple);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--primary-purple); }
+  }
+  
+  /* Highlighted text animation */
+  .highlighted-text {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .highlighted-text::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.1em;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-purple);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .highlighted-text:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  /* Animated text for education degree */
+  .animated-text {
+    background: linear-gradient(to right, #9d4edd, #c77dff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient 3s ease infinite;
+    background-size: 200% 200%;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Fade-in animation for content sections */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 992px) {
+    .tech-card {
+      width: 100px;
+      height: 100px;
+    }
+    
+    .tech-card-front {
+      font-size: 3em;
+    }
+    
+    .tech-card-back {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-img {
+      padding-top: 0;
+    }
+    
+    .tech-card {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .tech-card-front {
+      font-size: 2.5em;
+    }
+    
+    .tech-card-back {
+      font-size: 0.9rem;
+    }
+    
+    .education-degree {
+      font-size: 1.4em;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .tech-card {
+      width: 70px;
+      height: 70px;
+    }
+    
+    .tech-card-front {
+      font-size: 2em;
+    }
+    
+    .tech-card-back {
+      font-size: 0.8rem;
+      padding: 5px;
+    }
+  }
+
+
+  /* Flip box styling - pure CSS solution */
+.flip-box {
+    width: 120px;
+    height: 120px;
+    margin: 15px;
+    perspective: 1000px; /* For 3D effect */
+  }
+  
+  /* Container that holds front and back */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 5px;
+    border: 1.7px solid rgba(200, 137, 230, 0.637);
+    background-color: rgba(25, 25, 25, 0.6);
+    box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137);
+  }
+  
+  /* Hover effect for flip */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+    border: 2px solid rgba(197, 115, 230, 0.883);
+    box-shadow: 0 8px 16px rgba(89, 4, 168, 0.2);
+  }
+  
+  /* Front and back common styling */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  /* Front specific styling (the icon) */
+  .flip-box-front {
+    font-size: 3.5em;
+  }
+  
+  /* Back specific styling (the text) */
+  .flip-box-back {
+    background-color: rgba(25, 25, 25, 0.9);
+    transform: rotateY(180deg);
+    padding: 10px;
+  }
+  
+  .flip-box-back h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  /* Responsive sizing */
+  @media (max-width: 992px) {
+    .flip-box {
+      width: 100px;
+      height: 100px;
+    }
+    
+    .flip-box-front {
+      font-size: 3em;
+    }
+    
+    .flip-box-back h3 {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .flip-box {
+      width: 80px;
+      height: 80px;
+      margin: 10px;
+    }
+    
+    .flip-box-front {
+      font-size: 2.5em;
+    }
+    
+    .flip-box-back h3 {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .flip-box {
+      width: 70px;
+      height: 70px;
+      margin: 8px;
+    }
+    
+    .flip-box-front {
+      font-size: 2em;
+    }
+    
+    .flip-box-back h3 {
+      font-size: 0.8rem;
+    }
+  }
