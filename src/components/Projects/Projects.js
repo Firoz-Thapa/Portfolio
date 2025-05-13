@@ -7,6 +7,7 @@ import park from "../../Assets/Projects/park.png";
 import app from "../../Assets/Projects/app.png";
 import psp from "../../Assets/Projects/psp.png"; 
 import gym from "../../Assets/Projects/gym.png";
+import plant from "../../Assets/Projects/plant.png";
 
 function Projects() {
   return (
@@ -59,6 +60,16 @@ function Projects() {
               description="IoT gym occupancy system with motion sensors tracking real-time zone usage and providing dashboard analytics to optimize gym operations."
               ghLink="https://github.com/Firoz-Thapa/iot-pipeline"
               demoLink="https://youtu.be/RgjcO-loo10"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={plant}
+              isBlog={false}
+              title="Plant Monitoring System"
+              description="A complete IoT solution for monitoring plant soil moisture in real-time, with data visualization and alerts using Raspberry Pi Pico, Node.js, and React."
+              ghLink="https://github.com/Firoz-Thapa/Plant_Monitoring_System/tree/main"
+              demoLink="https://www.youtube.com/watch?v=1gQZejyTcGo"
             />
           </Col>
         </Row>
