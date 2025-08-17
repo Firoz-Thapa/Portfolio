@@ -7,6 +7,7 @@ import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./about.css"; // IMPORTANT: Import the CSS file
 
 function About() {
   // Initialize AOS animation library
@@ -59,6 +60,62 @@ function About() {
             <img src={laptopImg} alt="about" className="img-fluid floating" />
           </Col>
         </Row>
+
+        {/* Work Experience Section */}
+        <div data-aos="fade-up">
+          <h1 className="project-heading">
+            My <strong className="purple">Work Experience </strong>
+          </h1>
+          <div className="experience-timeline">
+            <ExperienceItem 
+              position="Front-End Developer"
+              company="Lan4AI"
+              location="Remote"
+              duration="February 2025 – Present"
+              description={[
+                "Improved UX and optimized performance for AI-based products",
+                "Diagnosed and resolved front-end issues using TypeScript and React.js"
+              ]}
+              technologies={["TypeScript", "React.js"]}
+              isLatest={true}
+            />
+            
+            <ExperienceItem 
+              position="Thesis Worker"
+              company="LAB University of Applied Sciences"
+              location="Finland"
+              duration="November 2024 – April 2025"
+              description={[
+                "Developed a MERN stack Personal Study Plan web application for Department of Mechanical Engineering"
+              ]}
+              technologies={["MongoDB", "Express.js", "React", "Node.js"]}
+            />
+            
+            <ExperienceItem 
+              position="Summer Intern"
+              company="LAB University of Applied Sciences"
+              location="Lappeenranta, Finland"
+              duration="May 2024 – August 2024"
+              description={[
+                "Built React.js markdown documentation tool with automated testing workflows",
+                "Implemented CI/CD pipelines for streamlined deployment"
+              ]}
+              technologies={["React.js", "JavaScript", "CI/CD", "Docker", "Node.js"]}
+            />
+            
+            <ExperienceItem 
+              position="LUMA Assistant"
+              company="LUT University"
+              location="Lappeenranta, Finland"
+              duration="February 2023 – January 2024"
+              description={[
+                "Delivered technology workshops and developed educational materials for K–12 students",
+                "Improved workshop content based on faculty feedback"
+              ]}
+              technologies={["Educational Technology", "Workshop Development"]}
+            />
+          </div>
+        </div>
         
         {/* Education Section */}
         <div data-aos="fade-up">
@@ -68,7 +125,7 @@ function About() {
           <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
             <Col md={12} className="education-card" data-aos="zoom-in-up" data-aos-delay="200">
               <EducationCard 
-                degree="Bachelor of Information Technology"
+                degree="Bachelor of Industrial Information Technology"
                 institution="LAB University of Applied Sciences, Finland"
                 duration="2022 - 2025"
                 description="Focusing on software development, web technologies, and cloud computing."
@@ -95,7 +152,42 @@ function About() {
   );
 }
 
-// New Education Card Component
+// Professional Experience Item Component
+function ExperienceItem({ position, company, location, duration, description, technologies, isLatest }) {
+  return (
+    <div className={`experience-item ${isLatest ? 'latest' : ''}`} data-aos="fade-up" data-aos-delay="200">
+      <div className="experience-date">
+        <span className="duration">{duration}</span>
+      </div>
+      <div className="experience-content">
+        <div className="experience-header">
+          <h3 className="position-title">{position}</h3>
+          <div className="company-info">
+            <span className="company-name">{company}</span>
+            <span className="location">{location}</span>
+          </div>
+        </div>
+        <div className="experience-description">
+          <ul>
+            {description.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="tech-stack">
+          <span className="tech-label">Technologies:</span>
+          <div className="tech-tags">
+            {technologies.map((tech, index) => (
+              <span key={index} className="tech-tag">{tech}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Education Card Component
 function EducationCard({ degree, institution, duration, description }) {
   return (
     <div className="education-card-view">
