@@ -71,7 +71,7 @@ function About() {
               position="Front-End Developer"
               company="Lan4AI"
               location="Remote"
-              duration="February 2025 – Present"
+              duration="February 2025 – October 2025"
               description={[
                 "Improved UX and optimized performance for AI-based products",
                 "Diagnosed and resolved front-end issues using TypeScript and React.js"
