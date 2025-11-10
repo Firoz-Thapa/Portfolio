@@ -69,6 +69,19 @@ function About() {
           <div className="experience-timeline">
             <ExperienceItem 
               position="Front-End Developer"
+              company="LeadDesk Oyj"
+              location="OnSite"
+              duration="November 2025 – Present"
+              description={[
+                "Build and maintain responsive web applications using Angular framework",
+                "Write clean, type-safe code using TypeScript"
+              ]}
+              technologies={["TypeScript", "Angular"]}
+              isLatest={true}
+            />
+
+            <ExperienceItem 
+              position="Front-End Developer"
               company="Lan4AI"
               location="Remote"
               duration="February 2025 – October 2025"
