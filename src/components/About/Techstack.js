@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { CgCPlusPlus } from "react-icons/cg"; 
-import { DiJavascript1, DiReact, DiNodejs, DiMongodb, DiPython, DiGit, DiJava } from "react-icons/di";
+import { DiJavascript1, DiReact, DiNodejs, DiMongodb, DiPython, DiGit, DiJava, DiAngularSimple } from "react-icons/di";
 import { SiTypescript, SiHtml5, SiCss3, SiMysql, SiPostgresql, SiAmazonaws, SiCsharp, SiMicrosoftazure } from "react-icons/si";
 
 function Techstack() {
@@ -20,16 +20,20 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <CgCPlusPlus title="C++" />
       </Col>
+      
       <Col xs={4} md={2} className="tech-icons">
-        <DiJava title="Java" />
+        <SiCsharp title="C#" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiCsharp title="C#" /> {/* Proper C# icon */}
+        <DiJava title="Java" />
       </Col>
 
       {/* Frontend Technologies */}
       <Col xs={4} md={2} className="tech-icons">
         <DiReact title="React.js" />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiAngularSimple title="Angular" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiHtml5 title="HTML5" />
