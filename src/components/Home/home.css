@@ -1,0 +1,59 @@
+.home-subtitle {
+  color: #a588c0;
+  font-size: 1.2em;
+  padding-left: 50px;
+  margin-top: -20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 767px) {
+  .home-subtitle {
+    padding-left: 20px;
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+/* Enhanced typing effect container */
+.Typewriter__wrapper {
+  font-size: 2.2em !important;
+  color: #be6adf !important;
+  font-weight: 600 !important;
+  text-shadow: 0 0 10px rgba(190, 106, 223, 0.3);
+}
+
+/* Improved home about body styling */
+.home-about-body {
+  padding-top: 50px;
+  font-size: 1.2em !important;
+  text-align: left;
+  line-height: 1.8;
+}
+
+/* Fade in animation for content */
+.home-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Improved social icons hover effect */
+.home-social-icons {
+  transition: all 0.3s ease !important;
+}
+
+.home-social-icons:hover {
+  transform: scale(1.15) !important;
+}
+
+

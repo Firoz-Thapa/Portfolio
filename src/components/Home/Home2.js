@@ -18,33 +18,13 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
-              <br />
-              <br />I am fluent in Programming languages like
-              <i>
-                <b className="purple"> Javascript, Python. </b>
-              </i>
-              <br />
-              <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products.</b> 
-              </i>
-              <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js and Next.js</b>
-              </i>
+              I'm a Software Developer based in Finland, passionate about 
+              building scalable web applications.
+              <br /><br />
+              I work with
+              <b className="purple"> JavaScript, TypeScript, React, Angular, </b> 
+              and the
+              <b className="purple"> MERN Stack</b>.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -72,17 +52,17 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="mailto:gyawat.magar@gmail.com" // Add mailto link
+                  href="mailto:gyawat.magar@gmail.com"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <MdEmail /> {/* Email icon */}
+                  <MdEmail />
                 </a>
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/firoz-thapa-b3b886320" // Corrected link
+                  href="https://www.linkedin.com/in/firoz-thapa-b3b886320"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
