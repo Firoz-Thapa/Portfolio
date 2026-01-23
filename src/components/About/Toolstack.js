@@ -8,7 +8,8 @@ import {
   SiLinux,
   SiGithub,
   SiDocker,
-  SiJira
+  SiJira,
+  SiTeamcity,
 } from "react-icons/si";
 
 function Toolstack() {
@@ -40,8 +41,11 @@ function Toolstack() {
       <Col xs={4} md={2} className="tech-icons" data-aos="flip-left" data-aos-delay="700">
         <SiJira title="Jira" />
       </Col>
-      <Col xs={4} md={2} className="tech-icons" data-aos="flip-left" data-aos-delay="800">
+      <Col xs={4} md={2} className="tech-icons" data-aos="flip-left" data-aos-delay="700">
         <SiNetlify title="Netlify" />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons" data-aos="flip-left" data-aos-delay="800">
+        <SiTeamcity title="TeamCity" />
       </Col>
     </Row>
   );
