@@ -1,4 +1,3 @@
-import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {
   SiVisualstudiocode,
@@ -13,40 +12,37 @@ import {
 } from "react-icons/si";
 
 function Toolstack() {
+  const tools = [
+    { id: "linux", icon: SiLinux, name: "Linux", delay: "100" },
+    { id: "vscode", icon: SiVisualstudiocode, name: "Visual Studio Code", delay: "200" },
+    { id: "postman", icon: SiPostman, name: "Postman", delay: "300" },
+    { id: "github", icon: SiGithub, name: "GitHub", delay: "400" },
+    { id: "docker", icon: SiDocker, name: "Docker", delay: "500" },
+    { id: "slack", icon: SiSlack, name: "Slack", delay: "600" },
+    { id: "jira", icon: SiJira, name: "Jira", delay: "700" },
+    { id: "netlify", icon: SiNetlify, name: "Netlify", delay: "700" },
+    { id: "teamcity", icon: SiTeamcity, name: "TeamCity", delay: "800" },
+  ];
+
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      {/* Development Environment */}
-      <Col xs={4} md={2} className="tech-icons" data-aos="flip-left" data-aos-delay="100">
-        <SiLinux title="Linux" />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" data-aos="flip-left" data-aos-delay="200">
-        <SiVisualstudiocode title="Visual Studio Code" />
-      </Col>
-      
-      {/* Development Tools */}
-      <Col xs={4} md={2} className="tech-icons" data-aos="flip-left" data-aos-delay="300">
-        <SiPostman title="Postman" />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" data-aos="flip-left" data-aos-delay="400">
-        <SiGithub title="GitHub" />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" data-aos="flip-left" data-aos-delay="500">
-        <SiDocker title="Docker" />
-      </Col>
-      
-      {/* Collaboration & Deployment */}
-      <Col xs={4} md={2} className="tech-icons" data-aos="flip-left" data-aos-delay="600">
-        <SiSlack title="Slack" />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" data-aos="flip-left" data-aos-delay="700">
-        <SiJira title="Jira" />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" data-aos="flip-left" data-aos-delay="700">
-        <SiNetlify title="Netlify" />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" data-aos="flip-left" data-aos-delay="800">
-        <SiTeamcity title="TeamCity" />
-      </Col>
+      {tools.map((tool) => {
+        const Icon = tool.icon;
+        return (
+          <Col xs={4} md={2} key={tool.id} data-aos="flip-left" data-aos-delay={tool.delay} style={{ display: "flex", justifyContent: "center" }}>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <Icon title={tool.name} />
+                </div>
+                <div className="flip-card-back">
+                  {tool.name}
+                </div>
+              </div>
+            </div>
+          </Col>
+        );
+      })}
     </Row>
   );
 }

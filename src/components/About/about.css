@@ -133,93 +133,68 @@
     margin-bottom: 40px;
   }
   
-  /* Tech Card Flip Animation Styling */
+  /* Flip Card Container and Animation Styling */
   
-  /* Container for the flip card */
-  .tech-card-container {
-    perspective: 1000px;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* The actual card that flips */
-  .tech-card {
+  /* The flip card container - set the width and height to whatever you want */
+  .flip-card {
+    background-color: transparent;
     width: 120px;
     height: 120px;
-    cursor: pointer;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-    border-radius: 5px;
     border: 1.7px solid rgba(200, 137, 230, 0.637);
-    background-color: rgba(25, 25, 25, 0.6);
-    box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137);
+    perspective: 1000px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
   }
   
-  /* Flipped state */
-  .tech-card.flipped {
-    transform: rotateY(180deg);
-  }
-  
-  /* Front and back faces */
-  .tech-card-front, .tech-card-back {
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
     width: 100%;
     height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
     position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     border-radius: 5px;
   }
   
-  /* Front face (icon) */
-  .tech-card-front {
-    z-index: 2;
+  .flip-card-front {
+    color: white;
     font-size: 3.5em;
+    background-color: transparent;
   }
   
-  /* Back face (name) */
-  .tech-card-back {
-    transform: rotateY(180deg);
+  .flip-card-back {
     background-color: rgba(25, 25, 25, 0.9);
-    border: 1.7px solid rgba(200, 137, 230, 0.8);
+    color: white;
+    transform: rotateY(180deg);
     font-weight: 500;
     font-size: 1.1rem;
-    text-align: center;
+    border: 1.7px solid rgba(200, 137, 230, 0.8);
     padding: 10px;
   }
   
-  /* Hover effect */
-  .tech-card:hover {
+  .flip-card:hover {
     border-color: rgba(197, 115, 230, 0.883);
     box-shadow: 0 8px 16px rgba(89, 4, 168, 0.2);
   }
-  
-  /* Purple border animation on hover */
-  .tech-card::after {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    border: 2px solid transparent;
-    border-radius: 7px;
-    z-index: -1;
-    pointer-events: none;
-    transition: border-color 0.3s ease;
-  }
-  
-  .tech-card:hover::after {
-    border-color: var(--primary-purple, #c770f0);
-  }
-  
-  /* Animations for About Section */
-  
-  /* Floating animation for about image */
   .floating {
     animation: float 3s ease-in-out infinite;
   }
@@ -330,19 +305,18 @@
     opacity: 1;
     transform: translateY(0);
   }
-  
-  /* Media queries for responsive design */
   @media (max-width: 992px) {
-    .tech-card {
+    .flip-card {
       width: 100px;
       height: 100px;
+      margin: 12px;
     }
     
-    .tech-card-front {
+    .flip-card-front {
       font-size: 3em;
     }
     
-    .tech-card-back {
+    .flip-card-back {
       font-size: 1rem;
     }
   }
@@ -352,16 +326,17 @@
       padding-top: 0;
     }
     
-    .tech-card {
+    .flip-card {
       width: 80px;
       height: 80px;
+      margin: 10px;
     }
     
-    .tech-card-front {
+    .flip-card-front {
       font-size: 2.5em;
     }
     
-    .tech-card-back {
+    .flip-card-back {
       font-size: 0.9rem;
     }
     
@@ -371,31 +346,30 @@
   }
   
   @media (max-width: 576px) {
-    .tech-card {
+    .flip-card {
       width: 70px;
       height: 70px;
+      margin: 8px;
     }
     
-    .tech-card-front {
+    .flip-card-front {
       font-size: 2em;
     }
     
-    .tech-card-back {
+    .flip-card-back {
       font-size: 0.8rem;
       padding: 5px;
     }
   }
 
 
-  /* Flip box styling - pure CSS solution */
 .flip-box {
     width: 120px;
     height: 120px;
     margin: 15px;
-    perspective: 1000px; /* For 3D effect */
+    perspective: 1000px;
   }
   
-  /* Container that holds front and back */
   .flip-box-inner {
     position: relative;
     width: 100%;
@@ -600,11 +574,11 @@
 }
 
 .experience-header {
-  margin-bottom: 20px; /* Increased spacing */
+  margin-bottom: 20px;
 }
 
 .position-title {
-  font-size: 1.5em; /* Slightly larger */
+  font-size: 1.5em;
   margin: 0 0 10px 0;
   font-weight: 600;
   background: linear-gradient(45deg, #c770f0, #ff9a9e);
@@ -621,7 +595,7 @@
 }
 
 .company-name {
-  font-size: 1.15em; /* Slightly larger */
+  font-size: 1.15em;
   color: #e0e0e0;
   font-weight: 500;
 }
@@ -633,7 +607,7 @@
 }
 
 .experience-description {
-  margin: 25px 0; /* Increased spacing */
+  margin: 25px 0;
 }
 
 .experience-description ul {
@@ -645,7 +619,7 @@
 .experience-description li {
   position: relative;
   padding-left: 20px;
-  margin-bottom: 15px; /* Increased spacing between points */
+  margin-bottom: 15px;
   color: #e0e0e0;
   line-height: 1.6;
 }
@@ -661,7 +635,7 @@
 .tech-stack {
   border-top: 1px solid rgba(199, 112, 240, 0.2);
   padding-top: 20px;
-  margin-top: 20px; /* Increased spacing */
+  margin-top: 20px;
 }
 
 .tech-label {
@@ -669,13 +643,13 @@
   color: #a588c0;
   font-weight: 500;
   display: block;
-  margin-bottom: 10px; /* Increased spacing */
+  margin-bottom: 10px;
 }
 
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Increased spacing between tags */
+  gap: 10px;
 }
 
 .tech-tag {
@@ -695,7 +669,6 @@
   transform: translateY(-1px);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .experience-timeline {
     padding: 30px 0;
@@ -707,7 +680,7 @@
   
   .experience-item {
     padding-left: 50px;
-    margin-bottom: 60px; /* Reduced but still good spacing on mobile */
+    margin-bottom: 60px;
   }
   
   .experience-item::before {
@@ -751,7 +724,7 @@
   
   .experience-item {
     padding-left: 40px;
-    margin-bottom: 50px; /* Good spacing even on small screens */
+    margin-bottom: 50px;
   }
   
   .experience-content {
@@ -777,24 +750,20 @@
   }
 }
 
-/* Force spacing between experience items */
 .experience-item {
   margin-bottom: 80px !important;
   display: block !important;
   clear: both !important;
 }
 
-/* Last item should not have bottom margin */
 .experience-item:last-child {
   margin-bottom: 0 !important;
 }
 
-/* Ensure content has proper spacing */
 .experience-content {
   margin-bottom: 30px !important;
 }
 
-/* Mobile spacing fixes */
 @media (max-width: 768px) {
   .experience-item {
     margin-bottom: 60px !important;
@@ -813,13 +782,4 @@
   .experience-content {
     margin-bottom: 15px !important;
   }
-}
-
-/* Debug styles - remove these after fixing */
-.experience-item {
-  border: 1px solid red; /* Temporary - to see the boundaries */
-}
-
-.experience-timeline {
-  border: 2px solid blue; /* Temporary - to see the container */
 }
