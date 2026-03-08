@@ -29,7 +29,7 @@ function Projects() {
               title="Markdown Application"
               description="Markdown is a lightweight markup language for formatting text in a simple and readable way, easily converted to HTML."
               ghLink="https://github.com/Firoz-Thapa/Markdown_Application"
-              demoLink="https://mdapplication.netlify.app/"
+              demoLink="https://markdown-application.vercel.app/"
             />
           </Col>
           <Col md={4} className="project-card">
